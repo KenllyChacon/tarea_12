@@ -1,7 +1,7 @@
-package com.uce.edu.ec.proyecto_u3_pw_kc.service;
+package com.uce.edu.ec.tarea_12.service;
 
-import com.uce.edu.ec.proyecto_u3_pw_kc.model.Estudiante;
-import com.uce.edu.ec.proyecto_u3_pw_kc.repository.IEstudianteRepository;
+import com.uce.edu.ec.tarea_12.model.Estudiante;
+import com.uce.edu.ec.tarea_12.repository.IEstudianteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -31,6 +31,16 @@ public class EstudianteServiceImpl implements IEstudianteService{
     @Override
     public void eliminarEstudiante(Integer id) {
         this.estudianteRepository.eliminarEstudiante(id);
+    }
+
+    @Override
+    public Estudiante buscarEstudiantePorNombre(String nombre) {
+        return this.estudianteRepository.buscarEstudiantePorNombre(nombre);
+    }
+
+    @Override
+    public Estudiante buscarEstudiantePorApellido(String apellido) {
+        return this.estudianteRepository.buscarEstudiantePorApellido(apellido);
     }
 }
 

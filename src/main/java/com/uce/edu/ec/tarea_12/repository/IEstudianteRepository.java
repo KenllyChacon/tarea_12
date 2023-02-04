@@ -1,6 +1,6 @@
-package com.uce.edu.ec.proyecto_u3_pw_kc.repository;
+package com.uce.edu.ec.tarea_12.repository;
 
-import com.uce.edu.ec.proyecto_u3_pw_kc.model.Estudiante;
+import com.uce.edu.ec.tarea_12.model.Estudiante;
 
 public interface IEstudianteRepository {
 
@@ -8,5 +8,8 @@ public interface IEstudianteRepository {
     Estudiante buscarEstudiante(Integer id);
     void actualizarEstudiante(Estudiante estudiante);
     void eliminarEstudiante(Integer id);
+
+    Estudiante buscarEstudiantePorNombre(String nombre);
+    Estudiante buscarEstudiantePorApellido(String apellido);
 
 }

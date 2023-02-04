@@ -1,6 +1,6 @@
-package com.uce.edu.ec.proyecto_u3_pw_kc.service;
+package com.uce.edu.ec.tarea_12.service;
 
-import com.uce.edu.ec.proyecto_u3_pw_kc.model.Estudiante;
+import com.uce.edu.ec.tarea_12.model.Estudiante;
 
 public interface IEstudianteService {
 
@@ -10,4 +10,6 @@ public interface IEstudianteService {
     void actualizarEstudiante(Estudiante estudiante);
     void eliminarEstudiante(Integer id);
 
+    Estudiante buscarEstudiantePorNombre(String nombre);
+    Estudiante buscarEstudiantePorApellido(String apellido);
 }

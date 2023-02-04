@@ -1,7 +1,8 @@
-package com.uce.edu.ec.proyecto_u3_pw_kc.controller;
+package com.uce.edu.ec.tarea_12.controller;
 
-import com.uce.edu.ec.proyecto_u3_pw_kc.model.Estudiante;
-import com.uce.edu.ec.proyecto_u3_pw_kc.service.IEstudianteService;
+
+import com.uce.edu.ec.tarea_12.model.Estudiante;
+import com.uce.edu.ec.tarea_12.service.IEstudianteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,6 +22,16 @@ public class EstudianteControllerRestFul {
     @GetMapping("/buscar/{id}")
     public Estudiante buscarEstudiante(@PathVariable("id")  Integer id) {
         return this.iEstudianteService.buscarEstudiante(id);
+    }
+
+    @GetMapping("/buscarPorNombre/{nombre}")
+    public Estudiante buscarEstudiantePorNombre(@PathVariable("nombre") String nombre) {
+        return this.iEstudianteService.buscarEstudiantePorNombre(nombre);
+    }
+
+    @GetMapping("/buscarPorApellido/{apellido}")
+    public Estudiante buscarEstudiantePorApellido(@PathVariable("apellido") String apellido) {
+        return this.iEstudianteService.buscarEstudiantePorApellido(apellido);
     }
 
     public void actualizarEstudiante(Estudiante estudiante) {

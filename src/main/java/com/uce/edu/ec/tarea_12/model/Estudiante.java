@@ -1,4 +1,4 @@
-package com.uce.edu.ec.proyecto_u3_pw_kc.model;
+package com.uce.edu.ec.tarea_12.model;
 
 import jakarta.persistence.*;
 
